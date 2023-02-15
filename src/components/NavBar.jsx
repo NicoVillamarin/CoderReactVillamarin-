@@ -37,25 +37,30 @@ const NavBar = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                  <li className="nav-link">Motherboard</li>
+                    <a className="dropdown-item" href="#">
+                      Motherboard
+                    </a>
                   </li>
                   <li>
-                  <li className="nav-link">Procesadores</li>
+                    <a className="dropdown-item" href="#">
+                      Procesadores
+                    </a>
                   </li>
                   <li>
-                  <li className="nav-link">Placa de video</li>
+                    <a className="dropdown-item" href="#">
+                      Placa de video
+                    </a>
                   </li>
                   <li>
-                  <li className="nav-link">Memorias RAM</li>
-                  </li>
-                  <li>
-                  <li className="nav-link">Gabinete</li>
+                    <a className="dropdown-item" href="#">
+                      Memorias RAM
+                    </a>
                   </li>
                 </ul>
               </li>
 
               <Link to={"/store"}>
-                <li className="nav-link">Store</li>
+                <button className="btn btn-warning">Store</button>
               </Link>
             </ul>
           </div>
