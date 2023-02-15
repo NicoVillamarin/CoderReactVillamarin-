@@ -1,9 +1,94 @@
+*{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+body{
+  background-image: url("assets/img_producto/fondo.jpg");
+  background-size: contain;
+}
+
+/*  Estilo del componente Home.jsx*/
+
+.imgHome{
+  margin: 50px auto;
+  height: 350px;
+  width: 650px;
+  background-image: url("./assets/img_producto/home.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 50px wheat;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  margin: 50px auto;
+}
+.buttonHome{
+  border: 0;
+  width: 150px;
+  height: 35px;
+  border-radius: 10px;
+  margin: 30px;
+}
+
+/*  Estilo del componente ItemListContainer.jsx*/
+
+.TituloPrincipal{
+  text-align: center;
+  padding: 50px;
+}
+
+/*  Estilo del componente NavBar.jsx*/
+.logo{
+  width: 100px;
+  border-radius: 100%;
+}
 .bloqueNav{
   justify-content: center;
 }
+
+/*  Estilo del componente CardWidget.jsx*/
+
 .bloqueBoton{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+}
+
+/*  Estilo del componente ItemList.jsx*/
+
+.BloqueProd{
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+.listProd{
+  box-shadow: 1px 1px 40px black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.card-body{
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*  Estilo del componente Item.jsx*/
+
+.imgProd{
+  width: 250px;
+  margin: 0 auto;
+}
+.cardProd{
+  height: 490px;
+  text-align: center;
+  width: 300px;
 }

@@ -4,7 +4,7 @@ import '../App.css'
 const CardWidget = () => {
     return(
         <div className='bloqueBoton'>
-            <button type="button" className="btn btn-secondary btn-lg buttonCompra">🛒<span>0</span></button>
+            <button type="button" className="btn btn-warning btn-lg buttonCompra">🛒<span>0</span></button>
         </div>
     )
 }
