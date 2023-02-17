@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="bloqueNav">
+      
       <nav className="navbar navbar-expand-lg bg-secondary">
         <div className="container-fluid">
           <Link to={"/"}>
@@ -68,9 +69,12 @@ const NavBar = () => {
           {/*Componente CardWidget */}
 
           <CardWidget />
-        </div>
+        </div> 
       </nav>
+      
+     
     </div>
+
   );
 };
 

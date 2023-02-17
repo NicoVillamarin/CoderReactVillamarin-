@@ -48,7 +48,6 @@ body{
 .bloqueNav{
   justify-content: center;
 }
-
 /*  Estilo del componente CardWidget.jsx*/
 
 .bloqueBoton{
@@ -88,7 +87,7 @@ body{
   margin: 0 auto;
 }
 .cardProd{
-  height: 490px;
+  height: 500px;
   text-align: center;
   width: 300px;
 }
@@ -100,4 +99,17 @@ body{
   justify-content: center;
   width: 50%;
   margin: 30px auto;
+}
+
+/*  Estilo del componente ItemCount.jsx*/
+
+.BloqueCount{
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.SpanCount{
+  font-weight: bold;
+  margin: 10px;
 }
