@@ -60,7 +60,7 @@ const NavBar = () => {
               </li>
 
               <Link to={"/store"}>
-                <button className="btn btn-warning">Store</button>
+                <button className="btn btn-secundary">Store</button>
               </Link>
             </ul>
           </div>

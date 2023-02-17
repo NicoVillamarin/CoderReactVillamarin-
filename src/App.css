@@ -14,8 +14,8 @@ body{
   margin: 50px auto;
   height: 350px;
   width: 650px;
-  background-image: url("./assets/img_producto/home.png");
-  background-size: contain;
+  background-image: url("./assets/img_producto/home.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 1px 1px 50px wheat;
   border-radius: 20px;
@@ -91,4 +91,13 @@ body{
   height: 490px;
   text-align: center;
   width: 300px;
+}
+
+/*  Estilo del componente Cart.jsx*/
+
+.BloqueCart{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 30px auto;
 }
