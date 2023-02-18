@@ -4,18 +4,18 @@ import "../App.css"
 
 const ItemCount = ({stock}) => {
 
-    let [Agregar, SetAgregar] = useState([0])
-
+    let [Agregar, SetAgregar] = useState(0) 
+ 
     const AgregarProd = () =>{
-        if(Agregar <= stock){
-            SetAgregar(Agregar++)
+        if(Agregar < stock){
+            SetAgregar(Agregar +1)
         }
         
-    }
+    } 
 
     const Descontar = () =>{
-        if(Agregar >= 0){
-            SetAgregar(Agregar--)
+        if(Agregar > 0){
+            SetAgregar(Agregar -1)
         }
         
     }

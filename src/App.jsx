@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Cart from "./components/Cart";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
+import ItemDetailContainer from "./containers/ItemDetailContainer";
 import ItemListContainer from "./containers/ItemListContainer";
 
 
@@ -16,6 +17,8 @@ const App = () => {
           <Route exact path="/" element={<Home />} /> 
           <Route exact path="/cart" element={<Cart/>}/>
           <Route exact path="/store" element={<ItemListContainer greeting="CompuSearch" />} />
+          <Route exact path="/category/:category" element={<ItemListContainer />}/>
+          <Route exact path="/item/:id" element={ <ItemDetailContainer />}/>
         </Routes>
       </BrowserRouter>
     </>

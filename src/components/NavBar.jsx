@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <div className="bloqueNav">
-      
+
       <nav className="navbar navbar-expand-lg bg-secondary">
         <div className="container-fluid">
           <Link to={"/"}>
@@ -38,30 +38,30 @@ const NavBar = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to={`/category/${"moterboard"}`}>
                       Motherboard
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to={`/category/${"procesador"}`}>
                       Procesadores
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to={`/category/${"video"}`}>
                       Placa de video
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to={`/category/${"memoria"}`}>
                       Memorias RAM
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
 
-              <Link to={"/store"}>
-                <button className="btn btn-secundary">Store</button>
+              <Link className="nav-link" to={"/store"}>
+                Store
               </Link>
             </ul>
           </div>
@@ -69,10 +69,10 @@ const NavBar = () => {
           {/*Componente CardWidget */}
 
           <CardWidget />
-        </div> 
+        </div>
       </nav>
-      
-     
+
+
     </div>
 
   );

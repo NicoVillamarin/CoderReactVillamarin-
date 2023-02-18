@@ -1,23 +1,19 @@
 import React from "react";
 import ItemList from "../components/ItemList";
-import {useEffect, useState} from "react"
 import "../App.css"
+import { useParams } from "react-router-dom";
+import Info from "../../data.json"
+import Error from "../components/Error";
+
 
 const ItemListContainer = ({greeting}) =>{
-    const getProduc = async () => {
-        const response = await fetch('./data.json');
-        const data = await response.json(); 
-        return data;
-    };
-    const [product, setProduct] = useState([]);
-    useEffect(()=>{
-        getProduc().then((product)=> setProduct(product))
-    }, []);
+    
+    const { category } = useParams();
+    const itemFilter = Info.filter((product) =>product.category === category)
     return(
         <>
-            <h1 className="TituloPrincipal">Bienvenidos a {greeting}</h1>
-            <ItemList product={product}/>
-            
+            <h1 className="TituloPrincipal">{greeting}</h1>
+            {category ? <ItemList product={itemFilter}/> : <ItemList product={Info}/>}
         </>
     );
 }

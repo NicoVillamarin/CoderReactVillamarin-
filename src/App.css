@@ -113,3 +113,12 @@ body{
   font-weight: bold;
   margin: 10px;
 }
+
+/*  Estilo del componente ItemDetail.jsx*/
+
+.cardProdDetail{
+  margin: 20px auto;
+  height: 650px;
+  text-align: center;
+  width: 500px;
+}

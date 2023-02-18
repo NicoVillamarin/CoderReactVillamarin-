@@ -5,8 +5,8 @@
         "producto": "Motherboard Asus a320m-k",
         "descripcion": "AMD AM4 Socket AMD Ryzen™ 2nd Generation/Ryzen™ with Radeon™ Vega Graphics/Ryzen™ 1st Generation/7th Generation A-series/Athlon X4 Processors Supports CPU up to 8  cores",
         "precio": 20000,
-        "categoria": "motherboard",
-        "cantidad": 5
+        "category": "motherboard",
+        "cantidad": 15
     },
     {
         "id": 2,
@@ -14,8 +14,8 @@
         "producto": "Procesador Ryzen 5 5500U",
         "descripcion": "El AMD Ryzen 5 5500U es un procesador para portátiles delgados y ligeros basado en la generación Lucienne. El R5 5500U integra seis núcleos basados en la microarquitectura Zen 2. Tienen una velocidad de reloj de 2,1 (reloj base garantizado) a 4 GHz (Turbo) y soportan SMT / Hyperthreading (12 hilos).",
         "precio": 70000,
-        "categoria": "procesador",
-        "cantidad": 5
+        "category": "procesador",
+        "cantidad": 1
     },
     {
         "id": 3,
@@ -23,8 +23,8 @@
         "producto": "Procesador Ryzen 3 3200ge",
         "descripcion": "Tiene 4 núcleos y 4 flujos de datos y fabricado por tecnología 12 nm, la frecuencia máxima es de 4000 MHz, con el miltiplicador bloqueado. En términos de compatibilidad, este es el procesador para socket AMD Socket AM4 con TDP 35 Watt y la temperatura máxima 95 °C.",
         "precio": 98000,
-        "categoria": "procesador",
-        "cantidad": 5
+        "category": "procesador",
+        "cantidad": 7
     },
     {
         "id": 4,
@@ -32,8 +32,8 @@
         "producto": "Gabinete V200 Tg",
         "descripcion": "El chasis de torre intermedia V200 Tempered Glass Edition es la actualización perfecta para alguien que busca renovar su plataforma. Cuenta con una ventana de vidrio templado duradero, una ventana frontal de acrílico transparente y una práctica cubierta de fuente de alimentación. ",
         "precio": 12000,
-        "categoria": "gabinete",
-        "cantidad": 5
+        "category": "gabinete",
+        "cantidad": 20
     },
     {
         "id": 5,
@@ -41,8 +41,8 @@
         "producto": "MEMORIA 16GB (2X8GB) DDR4 3600 CORSAIR DOMINATOR",
         "descripcion": "La memoria DDR4 CORSAIR DOMINATOR PLATINUM RGB redefine las memorias premium DDR4, con un diseño superior en aluminio, chips de memoria de alta frecuencia estrictamente verificados.",
         "precio": 55000,
-        "categoria": "memoria",
-        "cantidad": 0
+        "category": "memoria",
+        "cantidad": 10
     },
     {
         "id": 6,
@@ -50,7 +50,7 @@
         "producto": "VIDEO RADEON RX 7900 XTX 24GB GIGABYTE GAMING OC",
         "descripcion": "Basada en la arquitectura RDNA 3, la tarjeta gráfica Gigabyte Radeon RX 7900 XTX GAMING OC 24G está diseñada para juegos 4K UHD. Potente y eficaz, hará las delicias de jugadores y creativos que busquen una solución gráfica potente e innovadora.",
         "precio": 550000,
-        "categoria": "video",
-        "cantidad": 4
+        "category": "video",
+        "cantidad": 2
     }
 ]
