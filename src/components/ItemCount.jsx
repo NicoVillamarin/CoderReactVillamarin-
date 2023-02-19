@@ -21,9 +21,9 @@ const ItemCount = ({stock}) => {
     }
     return (
         <div className='BloqueCount'>
-            <button onClick={Descontar} className="btn btn-warning">-</button>
+            <button onClick={Descontar} className="btn btn-secondary">-</button>
             <span className='SpanCount'>{Agregar} </span>
-            <button onClick={AgregarProd} className="btn btn-warning">+</button>
+            <button onClick={AgregarProd} className="btn btn-secondary">+</button>
         </div>
     )
 }

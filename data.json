@@ -52,5 +52,42 @@
         "precio": 550000,
         "category": "video",
         "cantidad": 2
+    },
+    {
+        "id": 7,
+        "img": 7,
+        "producto": "MOTHER GIGAGYTE AMD GA-A320M-H AM4",
+        "descripcion": "Motherboard Gigabyte para procesadores AMD de sócalo AM4, dispone de bancos de memoria de alta velocidad, que soportan hasta 3200 MHz tipo DDR4 y soporte para procesadores serie 1000, 2000 y 3000",
+        "precio": 20500,
+        "category": "motherboard",
+        "cantidad": 21
+    },
+    {
+        "id": 8,
+        "img": 8,
+        "producto": "Procesador Intel Core i9-10900K BX8070110900K de 10 núcleos",
+        "descripcion": "Productividad y entretenimiento, todo disponible en tu computadora de escritorio. La superioridad tecnológica de INTEL es un beneficio para todo tipo de profesionales. Asegura el mejor rendimiento de las aplicaciones.",
+        "precio": 200500,
+        "category": "procesador",
+        "cantidad": 5
+    },
+    {
+        "id": 9,
+        "img": 9,
+        "producto": "Placa de video Nvidia Zotac Gaming GeForce GTX 16 Series GTX 1660 SUPER ZT-T16620F-10L 6GB",
+        "descripcion": "Nvidia es el fabricante líder de placas de video; su calidad asegura una experiencia positiva en el desarrollo del motor gráfico de tu computadora. Además, sus procesadores usan tecnología de punta para que puedas disfrutar de un producto veloz y duradero",
+        "precio": 202500,
+        "category": "video",
+        "cantidad": 3
+    },
+    {
+        "id": 10,
+        "img": 10,
+        "producto": "Memoria RAM Fury Beast DDR4 RGB gamer color negro 16GB 1 Kingston KF432C16BBA/16",
+        "descripcion": "Con su tecnología DDR4, mejorará el desempeño de tu equipo, ya que aumentará la fluidez y la velocidad en la transferencia de datos ¡Optimizá al máximo el rendimiento de tu computadora y reducí el consumo energético!",
+        "precio": 26500,
+        "category": "memoria",
+        "cantidad": 35
     }
+
 ]

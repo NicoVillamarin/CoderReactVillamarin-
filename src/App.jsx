@@ -16,8 +16,8 @@ const App = () => {
           {/* Componente Item sera donde se componga el cuerpo de la pagina */}
           <Route exact path="/" element={<Home />} /> 
           <Route exact path="/cart" element={<Cart/>}/>
-          <Route exact path="/store" element={<ItemListContainer greeting="CompuSearch" />} />
-          <Route exact path="/category/:category" element={<ItemListContainer />}/>
+          <Route exact path="/store" element={<ItemListContainer greeting="Computer Technology" />} />
+          <Route exact path="/category/:categoryid" element={<ItemListContainer />}/>
           <Route exact path="/item/:id" element={ <ItemDetailContainer />}/>
         </Routes>
       </BrowserRouter>
