@@ -2,7 +2,7 @@ import React from 'react'
 import "../App.css"
 import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
-
+import CartContext from '../context/CartContext'
 
 
 
@@ -19,7 +19,6 @@ function Item({ id, producto, precio, cantidad, img}) {
                 <h5 className="card-title fw-bold">{producto}</h5>
                     <p className="card-text fw-bolder">Precio ARS: ${formatNumber(precio)}</p>
                     <p className="card-text fw-bolder">Stock: {cantidad}</p>
-                    <ItemCount stock={cantidad}/>
                     <Link to={`/item/${id}`}>
                     <p className="btn btn-secondary">Detalles</p>
                     </Link>

@@ -1,19 +1,15 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({ productos }) => {
-    const { id } = useParams();
-    const FiltradoProducto = productos.filter((prod) =>prod.id == id);
-
     function formatNumber(number){
         return new Intl.NumberFormat().format(number)
     }
 
     return (
         <div>
-            {FiltradoProducto.map((prod) => {
+            {productos.map((prod) => {
                 return (
                     <div className="card cardProdDetail" key={prod.id}>
                         <img
