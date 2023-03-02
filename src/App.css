@@ -129,3 +129,18 @@ body{
   text-align: center;
   width: 500px;
 }
+
+/*  Estilo del componente Loading.jsx*/
+
+.bloqueLoading{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.circule{
+  margin: 15px;
+  width: 100px;
+  height: 100px;
+}

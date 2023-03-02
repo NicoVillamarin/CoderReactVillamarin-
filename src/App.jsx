@@ -7,6 +7,7 @@ import ItemDetailContainer from "./containers/ItemDetailContainer";
 import ItemListContainer from "./containers/ItemListContainer";
 
 
+
 const App = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const App = () => {
         <CartContext>
           {/* Componente NavBar que incluye componente CardWidget */}
           <NavBar />
+
           <Routes>
             {/* Componente Item sera donde se componga el cuerpo de la pagina */}
             <Route exact path="/" element={<Home />} />

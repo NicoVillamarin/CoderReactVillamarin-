@@ -1,4 +1,4 @@
-[
+const productos = [
     {
         "id": 1,
         "img": 1,
@@ -91,3 +91,16 @@
     }
 
 ]
+
+export const getProducts = () => {
+    let error = false;
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (!error) {
+                resolve(productos);
+            } else {
+                reject('Hubo un error intente mas tarde');
+            }
+        }, 2000);
+    });
+};

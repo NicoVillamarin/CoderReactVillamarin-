@@ -1,19 +1,24 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-import Info from "../../data.json"
-import ItemDetail from '../components/ItemDetail'
+import React, { useEffect, useState } from 'react';
+import { getProducts } from '../../data';
+import ItemDetail from '../components/ItemDetail';
+import Loading from '../components/Loading';
+import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
-  const productos = Info;
+  const [detalleProducto, setDetalleProducto] = useState({});
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
-  const FiltradoProducto = productos.filter((prod) =>prod.id == id);
-
-  
+  useEffect(() => {
+    getProducts()
+      .then((res) => setDetalleProducto(res.find((item) => item.id === parseInt(id))))
+      .catch((error) => console.log(error))
+      .finally(() => setLoading(false));
+  }, [id]);
   return (
     <div>
-      <ItemDetail productos={FiltradoProducto}/>
+      {loading ? <Loading /> : <ItemDetail detalleProducto={detalleProducto} />}
     </div>
-  )
-}
+  );
+};
 
 export default ItemDetailContainer
