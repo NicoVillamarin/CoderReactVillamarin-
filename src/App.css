@@ -133,7 +133,7 @@ body{
 /*  Estilo del componente Loading.jsx*/
 
 .bloqueLoading{
-  margin-top: 50px;
+  margin-top: 50px; 
   display: flex;
   flex-direction: row;
   justify-content: center;
