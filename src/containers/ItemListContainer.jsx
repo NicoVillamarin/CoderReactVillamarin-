@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import ItemList from "../components/ItemList";
 import "../App.css"
 import { useParams } from "react-router-dom";
-import { getProducts } from "../../data.js"
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 import Loading from "../components/Loading";
 
 const ItemListContainer = ({ greeting }) => {
@@ -16,16 +15,13 @@ const ItemListContainer = ({ greeting }) => {
         setLoading(true);
         const db = getFirestore();
 
-        const itemsCollection = collection(db, "Productos");
+        const itemsCollection = categoryid ? query(collection(db, "Productos"), where("category", "==", categoryid)) : collection(db, "Productos");
     
         getDocs(itemsCollection)
             .then((snapshot) => {
-                if (categoryid) {
-                    setListaProductos(snapshot.docs.filter((doc) => ({ id: doc.category === categoryid, ...doc.data() }) ));
-                } else {
-                    setListaProductos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-                }
+                setListaProductos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
             })
+            
             .catch((error) => console.log(error))
             .finally(() => setLoading(false));
     }, [categoryid]);
