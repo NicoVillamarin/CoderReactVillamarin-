@@ -24,10 +24,7 @@ const ItemDetail = ({ detalleProducto }) => {
                     </p>
                     <p className="card-text">Descripcion: {descripcion}</p>
                     <p className="card-text fw-bolder">Stock: {cantidad}</p>
-                    <ItemCount stock={cantidad} />
-                    <Link to={"/cart"}>
-                        <button className="btn btn-secondary">Agregar al carrito</button>
-                    </Link>
+                    <ItemCount stock={cantidad} id={id} precio={precio} producto={producto}/>
                 </div>
             </div>
 
