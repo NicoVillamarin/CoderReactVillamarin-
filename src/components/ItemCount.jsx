@@ -1,12 +1,12 @@
 import React, { useState, useContext } from 'react'
 import "../App.css"
 import { CounterContext } from '../context/CartContext.jsx'
-import { Link } from 'react-router-dom'
 
-const ItemCount = ({ stock, id, precio, producto }) => {
+
+const ItemCount = ({ stock, id, precio, producto, img }) => {
 
     const [cart, setCart] = useContext(CounterContext);
-    let [Agregar, SetAgregar] = useState(0)
+    let [Agregar, SetAgregar] = useState(1)
 
     const AgregarProd = () => {
         if (Agregar < stock) {
@@ -16,7 +16,7 @@ const ItemCount = ({ stock, id, precio, producto }) => {
     }
 
     const Descontar = () => {
-        if (Agregar > 0) {
+        if (Agregar > 1) {
             SetAgregar(Agregar - 1)
         }
 
@@ -34,7 +34,7 @@ const ItemCount = ({ stock, id, precio, producto }) => {
                     }
                 })
             } else {
-                return [...agrItems, { id, cantidad: Agregar, precio, producto }];
+                return [...agrItems, { id, cantidad: Agregar, precio, producto, img }];
             }
         })
     }

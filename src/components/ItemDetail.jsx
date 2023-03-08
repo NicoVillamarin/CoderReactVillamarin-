@@ -24,7 +24,7 @@ const ItemDetail = ({ detalleProducto }) => {
                     </p>
                     <p className="card-text">Descripcion: {descripcion}</p>
                     <p className="card-text fw-bolder">Stock: {cantidad}</p>
-                    <ItemCount stock={cantidad} id={id} precio={precio} producto={producto}/>
+                    <ItemCount stock={cantidad} id={id} precio={precio} producto={producto} img={img}/>
                 </div>
             </div>
 

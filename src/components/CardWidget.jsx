@@ -7,15 +7,15 @@ const CardWidget = () => {
 
     const [cart, setCart] = useContext(CounterContext);
 
-  const quantity = cart.reduce((acc, curr) => {
-    return acc + curr.quantity;
+  const cantidad = cart.reduce((acc, curr) => {
+    return acc + curr.cantidad;
   }, 0);
     return (
         <div className='bloqueBoton'>
             <Link to={"/cart"}>
-                <button type="button" className="btn btn-warning btn-lg buttonCompra">🛒<span>{quantity}</span></button>
+                <button type="button" className="btn btn-warning btn-lg buttonCompra">🛒{cantidad}</button>
 
-            </Link>
+            </Link> 
         </div>
     )
 }
