@@ -1,5 +1,7 @@
 import React from 'react'
 
+/* Componente sencillo para poder visualizar un sponner de carga */
+
 const Loading = () => {
   return (
     <div className='bloqueLoading'>

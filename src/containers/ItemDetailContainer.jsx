@@ -4,6 +4,8 @@ import Loading from '../components/Loading';
 import { useParams } from 'react-router-dom';
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 
+/* Es el componente mas importante donde recibe la logica del todo el proyecto, mas que nada la logica para visualizar los detalles del producto*/
+
 const ItemDetailContainer = () => {
   const [detalleProducto, setDetalleProducto] = useState({});
   const [loading, setLoading] = useState(true);
@@ -22,6 +24,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
+      {/* Logica para utilizar el componente del Loading(snipper) o itemDetail */}
       {loading ? <Loading /> : <ItemDetail detalleProducto={detalleProducto} />}
     </div>
   );

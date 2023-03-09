@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 
+/* Este componente es la pagina de inicio, donde aparece un Link para ir a la tienda */
+
 const Home = () => {
   return (
     <div>

@@ -3,6 +3,8 @@ import '../App.css'
 import {collection, getFirestore, addDoc} from "firebase/firestore"
 import { useState } from 'react'
 
+/* El componente SendOrder visualiza el formulario, y esta conectada a FireBase, enviando la informacion del cliente del pedido realizado y creando una OrdenID */
+
 const SendOrder = () => {
     const [ordenID, setOrdenID] = useState(null)
     const [nombre, setNombre] = useState("")

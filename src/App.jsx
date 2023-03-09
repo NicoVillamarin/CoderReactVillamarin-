@@ -17,7 +17,7 @@ const App = () => {
           <NavBar />
 
           <Routes>
-            {/* Componente Item sera donde se componga el cuerpo de la pagina */}
+            {/* Aca se encuentran todas las rutas de la page y sus componentes*/}
             <Route exact path="/" element={<Home />} />
             <Route exact path="/cart" element={<Cart />} />
             <Route exact path="/store" element={<ItemListContainer greeting="Computer Technology" />} />

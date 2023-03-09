@@ -5,17 +5,25 @@ import { CounterContext } from '../context/CartContext.jsx'
 import SendOrder from './SendOrder'
 import { BsFillTrashFill } from "react-icons/bs";
 
+
 const Cart = () => {
 
     const [cart, setCart] = useContext(CounterContext);
+
+    /* Esta funcion unicamente sirve para poder agregar un formato de numero con 00.00*/
 
     function formatNumber(number) {
         return new Intl.NumberFormat().format(number)
     }
 
-    const eliminarItem = (id) =>{
-        
-    }
+    /* Esta funcion suma todo el total de los productos selecionados */ 
+    const calcularTotalCompra = () => {
+        let total = 0;
+        cart.forEach((producto) => {
+                total += producto.precio
+        });
+    };
+    
 
     return (
         <>
@@ -23,6 +31,11 @@ const Cart = () => {
                 {
                     cart.map((item) => {
 
+                        const eliminarItem = (id) =>{
+                            const producto = cart.find((prod) => prod.id == id);
+                            console.log(producto)
+                            cart.splice(cart.indexOf(producto), 1);
+                        }
                         return (
                             <div key={item.id}>
                                 <div className="card cardWidget" >
@@ -39,15 +52,18 @@ const Cart = () => {
                                     </div>
                                     <div>
                                         <button className='buttonEliminar' onClick={eliminarItem}>
+                                            {/* Este componente es Unicamente un icono */}
                                         <BsFillTrashFill />
                                         </button>
                                     </div>
                                 </div>
+                                
                             </div>
                         );
                     })
                 }
             </div>
+            {/* Componete que contiene el formulario */}
             <SendOrder />
         </>
     )

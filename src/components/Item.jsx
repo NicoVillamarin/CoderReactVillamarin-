@@ -1,10 +1,9 @@
 import React from 'react'
 import "../App.css"
-import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
-import CartContext from '../context/CartContext'
 
 
+/* Este componente recibe por prop los paramentros para poder visualizar las card que me trae itemlist.jsx */
 
 function Item({ id, producto, precio, cantidad, img}) {
 

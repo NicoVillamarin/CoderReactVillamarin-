@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import "../App.css"
 import { CounterContext } from '../context/CartContext.jsx'
-
+import Swal from 'sweetalert2'
 
 const ItemCount = ({ stock, id, precio, producto, img }) => {
 
@@ -25,6 +25,14 @@ const ItemCount = ({ stock, id, precio, producto, img }) => {
     const agregarAlCarrito = () => {
         setCart((agrItems) => {
             const itemAgregado = agrItems.find((items) => items.id === id);
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Se agrego al carrito',
+                showConfirmButton: false,
+                timer: 1500
+            })
+
             if (itemAgregado) {
                 return agrItems.map((items) => {
                     if (items.id === id) {

@@ -3,6 +3,8 @@ import "../App.css";
 import CardWidget from "./CardWidget";
 import { Link } from "react-router-dom";
 
+/* Este componete visualiza el NavBar, que no tiene una ruta, porque se visualiza en todos los componentes */
+
 const NavBar = () => {
   return (
     <div className="bloqueNav">
