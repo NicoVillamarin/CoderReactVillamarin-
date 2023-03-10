@@ -1,6 +1,6 @@
 import React from "react";
 import { createContext, useState } from "react";
-
+import Swal from 'sweetalert2'
 
 export const CounterContext = createContext(null);
 
@@ -14,8 +14,20 @@ export const CartContext = ({ children }) => {
     }
 
 
+    const removeAll = () =>{
+        setCart([]);
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Todos los productos fueron eliminado',
+            showConfirmButton: false,
+            timer: 1500
+          })
+    }
+
+    
     return (
-        <CounterContext.Provider value={[ cart, setCart, removeItem]}>
+        <CounterContext.Provider value={{ cart, setCart, removeItem, removeAll }}>
             {children}
         </CounterContext.Provider>  
     );

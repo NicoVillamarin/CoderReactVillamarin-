@@ -5,7 +5,7 @@ import Swal from 'sweetalert2'
 
 const ItemCount = ({ stock, id, precio, producto, img }) => {
 
-    const [cart, setCart] = useContext(CounterContext);
+    const {cart, setCart} = useContext(CounterContext);
     let [Agregar, SetAgregar] = useState(1)
 
     const AgregarProd = () => {

@@ -6,7 +6,7 @@ import { CounterContext } from '../context/CartContext.jsx'
 /* En este componente se encuentra, el contador de los items y esta linkeado al componente cart.jsx*/
 const CardWidget = () => {
 
-    const [cart] = useContext(CounterContext);
+    const { cart } = useContext(CounterContext);
 
   const cantidad = cart.reduce((acc, curr) => {
     return acc + curr.cantidad;
