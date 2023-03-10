@@ -2,13 +2,14 @@ import React from 'react'
 import '../App.css'
 import { useContext } from 'react'
 import { CounterContext } from '../context/CartContext.jsx'
+
 import SendOrder from './SendOrder'
 import { BsFillTrashFill } from "react-icons/bs";
 
 
 const Cart = () => {
 
-    const [cart, setCart] = useContext(CounterContext);
+    const [cart, removeItem] = useContext(CounterContext);
 
     /* Esta funcion unicamente sirve para poder agregar un formato de numero con 00.00*/
 
@@ -31,11 +32,6 @@ const Cart = () => {
                 {
                     cart.map((item) => {
 
-                        const eliminarItem = (id) =>{
-                            const producto = cart.find((prod) => prod.id == id);
-                            console.log(producto)
-                            cart.splice(cart.indexOf(producto), 1);
-                        }
                         return (
                             <div key={item.id}>
                                 <div className="card cardWidget" >
@@ -51,7 +47,7 @@ const Cart = () => {
                                         <p className="card-text fw-bolder">Total parcial:<span className='spanInfo'> ${formatNumber(item.precio * item.cantidad)} </span></p>
                                     </div>
                                     <div>
-                                        <button className='buttonEliminar' onClick={eliminarItem}>
+                                        <button className='buttonEliminar' onClick={()=>removeItem}>
                                             {/* Este componente es Unicamente un icono */}
                                         <BsFillTrashFill />
                                         </button>
@@ -63,7 +59,7 @@ const Cart = () => {
                     })
                 }
             </div>
-            {/* Componete que contiene el formulario */}
+            {/* Componete que contiene el */}
             <SendOrder />
         </>
     )
