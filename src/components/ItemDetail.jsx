@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import ItemCount from "./ItemCount";
 
 /* Este componente su funcion es pasar la visualizacion del producto con mas detalles, que recibe por paramentro el prop de detalleProducto */ 
 
 const ItemDetail = ({ detalleProducto }) => {
     const { producto, descripcion, precio, cantidad, img, id } = detalleProducto;
+
     function formatNumber(number) {
         return new Intl.NumberFormat().format(number)
     }

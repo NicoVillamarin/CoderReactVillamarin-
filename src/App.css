@@ -3,6 +3,10 @@
   box-sizing: border-box;
   margin: 0;
 }
+hr{
+  width: 100%;
+  border: 0.5px solid black;
+}
 body{
   background-image: url("assets/img_producto/fondo.jpg");
   background-size: contain;
@@ -94,9 +98,14 @@ body{
   margin: 0 auto;
 }
 .cardProd{
-  height: 550px;
+  height: 570px;
   text-align: center;
   width: 300px;
+}
+
+.EyeVisibility{
+  font-size: 1.3rem;
+  align-items: center;
 }
 
 /*  Estilo del componente Cart.jsx*/
@@ -145,6 +154,30 @@ body{
   color: rgb(68, 40, 40);
   transform: scale(1.1);
 }
+.bloqButtonClear{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.btnClear{
+  font-weight: bolder;
+  width: 100px;
+  margin: 50px;
+}
+.precioTotal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  border-end-start-radius: 25px;
+  border-top-left-radius: 25px;
+  height: 40px;
+  width: 300px;
+  margin: 50px 0;
+  color: black;
+  background-color: beige;
+}
 
 /*  Estilo del componente ItemCount.jsx*/
 
@@ -183,3 +216,35 @@ body{
   height: 100px;
 }
 
+/*  Estilo del componente noItemsLoad.jsx*/
+
+.bloqueNoItems{
+  background-color: rgb(54, 54, 54);
+  border-radius: 25px;
+  width: 50%;
+  padding-top: 20px;
+  margin: 100px auto;
+  font-size: 1.3rem;
+  color: beige;
+  text-align: center;
+  box-shadow: 1px 1px 50px wheat;
+}
+
+/*  Estilo del componente SendOrder.jsx*/
+
+.BloqueForm{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  width: 50%;
+  color: beige;
+  background-color: rgb(54, 54, 54);
+  border-radius: 25px;
+  box-shadow: 1px 1px 50px wheat;
+}
+.botonEnviar{
+  width: 100px;
+  margin: 10px auto;
+}
