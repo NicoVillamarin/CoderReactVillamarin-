@@ -6,8 +6,6 @@ import CartContext from "./context/CartContext";
 import ItemDetailContainer from "./containers/ItemDetailContainer";
 import ItemListContainer from "./containers/ItemListContainer";
 
-
-
 const App = () => {
   return (
     <>

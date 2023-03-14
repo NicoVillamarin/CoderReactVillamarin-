@@ -9,16 +9,15 @@ export const CounterContext = createContext(null);
 export const CartContext = ({ children }) => {
     const [cart, setCart] = useState([]);
 
-    /* Esta funcion suma todo el total de los productos selecionados */ 
+    /* Esta funcion suma todo el total de los productos selecionados */
     const calcularTotalCompra = () => {
         let total = 0;
-        cart.forEach((e)=> total += (e.cantidad * e.precio))
+        cart.forEach((e) => total += (e.cantidad * e.precio))
         return total;
     };
-    
 
-    const removeItem = (id) =>{
-        setCart(cart.filter((item)=> item.id !== id));
+    const removeItem = (id) => {
+        setCart(cart.filter((item) => item.id !== id));
         Swal.fire({
             position: 'center',
             icon: 'error',
@@ -28,8 +27,7 @@ export const CartContext = ({ children }) => {
         })
     }
 
-
-    const removeAll = () =>{
+    const removeAll = () => {
         setCart([]);
         Swal.fire({
             position: 'center',
@@ -40,14 +38,14 @@ export const CartContext = ({ children }) => {
         })
     }
 
-    const removeForm = () =>{
+    const removeForm = () => {
         setCart([]);
     }
-    
+
     return (
         <CounterContext.Provider value={{ cart, setCart, removeItem, removeAll, calcularTotalCompra, removeForm }}>
             {children}
-        </CounterContext.Provider>  
+        </CounterContext.Provider>
     );
 };
 

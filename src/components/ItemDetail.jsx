@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import ItemCount from "./ItemCount";
 
-/* Este componente su funcion es pasar la visualizacion del producto con mas detalles, que recibe por paramentro el prop de detalleProducto */ 
+/* Este componente su funcion es pasar la visualizacion del producto con mas detalles, que recibe por paramentro el prop de detalleProducto */
 
 const ItemDetail = ({ detalleProducto }) => {
+
     const { producto, descripcion, precio, cantidad, img, id } = detalleProducto;
 
     function formatNumber(number) {
@@ -12,7 +13,6 @@ const ItemDetail = ({ detalleProducto }) => {
 
     return (
         <div>
-
             <div className="card cardProdDetail" key={id}>
                 <img
                     src={`../src/assets/img_producto/${img}.jpg`}
@@ -27,10 +27,9 @@ const ItemDetail = ({ detalleProducto }) => {
                     <p className="card-text">Descripcion: {descripcion}</p>
                     <p className="card-text fw-bolder">Stock: {cantidad}</p>
                     {/* A travez del componente ItemCount le pasamos por prop los parametros para poder visualizar lo agregado al carrito */}
-                    <ItemCount stock={cantidad} id={id} precio={precio} producto={producto} img={img}/>
+                    <ItemCount stock={cantidad} id={id} precio={precio} producto={producto} img={img} />
                 </div>
             </div>
-
         </div>
     );
 };

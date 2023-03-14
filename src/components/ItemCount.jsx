@@ -12,14 +12,12 @@ const ItemCount = ({ stock, id, precio, producto, img }) => {
         if (Agregar < stock) {
             SetAgregar(Agregar + 1)
         }
-
     }
 
     const Descontar = () => {
         if (Agregar > 1) {
             SetAgregar(Agregar - 1)
         }
-
     }
 
     const agregarAlCarrito = () => {
@@ -36,7 +34,7 @@ const ItemCount = ({ stock, id, precio, producto, img }) => {
             if (itemAgregado) {
                 return agrItems.map((items) => {
                     if (items.id === id) {
-                        return { ...items, cantidad: items.cantidad + Agregar};
+                        return { ...items, cantidad: items.cantidad + Agregar };
                     } else {
                         return items;
                     }
@@ -52,7 +50,7 @@ const ItemCount = ({ stock, id, precio, producto, img }) => {
             <div className='BloqueCount'>
                 <button onClick={Descontar} className="btn btn-secondary">-</button>
                 <span className='SpanCount'>{Agregar} </span>
-                <button onClick={AgregarProd } className="btn btn-secondary">+</button>
+                <button onClick={AgregarProd} className="btn btn-secondary">+</button>
             </div>
             <div>
                 <button className="btn btn-secondary" onClick={() => agregarAlCarrito()}>Agregar al carrito</button>

@@ -19,18 +19,15 @@ const ItemListContainer = ({ greeting }) => {
         /* Conection a la base de dato */
 
         const db = getFirestore();
-
         const itemsCollection = categoryid ? query(collection(db, "Productos"), where("category", "==", categoryid)) : collection(db, "Productos");
-    
         getDocs(itemsCollection)
             .then((snapshot) => {
                 setListaProductos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
             })
-            
             .catch((error) => console.log(error))
             .finally(() => setLoading(false));
     }, [categoryid]);
-    
+
     return (
         <>
             <h1 className="TituloPrincipal">{greeting}</h1>

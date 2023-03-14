@@ -4,7 +4,7 @@ import App from './App';
 import "./App.css";
 import { initializeApp } from "firebase/app";
 
-{/* Configuracion para conectar el proyecto con FireBase */}
+{/* Configuracion para conectar el proyecto con FireBase */ }
 const firebaseConfig = {
   apiKey: "AIzaSyDLHYJsFWOrfzAtpdbcbVx2ERL4IAGZvw8",
   authDomain: "computer-technology-879ae.firebaseapp.com",
@@ -18,9 +18,7 @@ initializeApp(firebaseConfig);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-  <React.StrictMode>  
-
-      <App />
-
+  <React.StrictMode>
+    <App />
   </React.StrictMode>,
 )
