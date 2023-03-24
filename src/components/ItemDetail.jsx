@@ -15,7 +15,7 @@ const ItemDetail = ({ detalleProducto }) => {
         <div>
             <div className="card cardProdDetail" key={id}>
                 <img
-                    src={`../public/assets/img_producto/${img}.jpg`}
+                    src={`../assets/img_producto/${img}.jpg`}
                     className="card-img-top imgProd"
                     alt="..."
                 />

@@ -8,7 +8,7 @@ hr{
   border: 0.5px solid black;
 }
 body{
-  background-image: url("assets/img_producto/fondo.jpg");
+  background-image: url("../public/assets/img_producto/fondo.jpg");
   background-size: contain;
 }
 
@@ -18,7 +18,7 @@ body{
   margin: 50px auto;
   height: 350px;
   width: 650px;
-  background-image: url("./assets/img_producto/home.jpg");
+  background-image: url("../public/assets/img_producto/home.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 1px 1px 50px wheat;
