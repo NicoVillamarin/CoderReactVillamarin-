@@ -17,7 +17,7 @@ body{
 .imgHome{
   margin: 50px auto;
   height: 350px;
-  width: 650px;
+  width: 50%;
   background-image: url("../public/assets/img_producto/home.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -242,9 +242,19 @@ body{
   color: beige;
   background-color: rgb(54, 54, 54);
   border-radius: 25px;
-  box-shadow: 1px 1px 50px wheat;
+  box-shadow:  1px 1px 50px wheat;
 }
 .botonEnviar{
   width: 100px;
   margin: 10px auto;
+}
+
+@media (min-width: 320px) and (max-width: 620px){
+  
+.TituloPrincipal{
+
+  font-size: 20px;
+  padding: 50px;
+}
+
 }
